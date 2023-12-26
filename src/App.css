@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select {
+  appearance: none;
+  /* ... */
+}
+
+select::after {
+  content: '\25BC';
+  /* Ganti dengan simbol pilihan yang diinginkan */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #333;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid white;
+}
+
+.hide-on-scroll {
+  transition: opacity 0.3s ease-in-out;
+  /* Tambahkan transisi opasitas */
+}
+
+.hide-on-scroll.is-scrolled {
+  opacity: 0;
+  /* Sembunyikan header saat di-scroll */
+}
